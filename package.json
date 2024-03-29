@@ -1,0 +1,15 @@
+{
+  "name": "grocery-app",
+  "version": "1.0.0",
+  "description": "A grocery app using HTML, CSS, JavaScript, and Firebase!",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "firebase": "^10.10.0"
+  }
+}
