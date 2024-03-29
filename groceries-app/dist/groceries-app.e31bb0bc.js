@@ -17839,8 +17839,12 @@ var addButtonEl = document.getElementById("add-button");
 var shoppingListEl = document.getElementById("shopping-list");
 addButtonEl.addEventListener("click", function () {
   var inputValue = inputFieldEl.value;
-  (0, _database.push)(shoppingListInDB, inputValue);
-  clearInputFieldEl();
+  if (inputValue === "") {
+    return;
+  } else {
+    (0, _database.push)(shoppingListInDB, inputValue);
+    clearInputFieldEl();
+  }
 });
 (0, _database.onValue)(shoppingListInDB, function (snapshot) {
   if (snapshot.exists()) {

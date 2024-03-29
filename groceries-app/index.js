@@ -16,10 +16,13 @@ const shoppingListEl = document.getElementById("shopping-list")
 
 addButtonEl.addEventListener("click", function() {
     let inputValue = inputFieldEl.value
-    
+    if (inputValue === "") {
+        return
+    } else {
     push(shoppingListInDB, inputValue)
     
     clearInputFieldEl()
+    }
 })
 
 onValue(shoppingListInDB, function(snapshot) {
@@ -61,6 +64,6 @@ function appendItemToShoppingListEl(item) {
         
         remove(exactLocationOfItemInDB)
     })
-    
+
     shoppingListEl.append(newEl)
 }
